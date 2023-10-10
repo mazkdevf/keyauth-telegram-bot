@@ -1,0 +1,12 @@
+{
+    "sellerkey_is_not_set": "You need to set your seller key first. Use /setseller <sellerkey> to set your seller key.",
+    "username_is_null": "You need to provide a username.",
+    "password_is_null": "You need to provide a password.",
+    "licensekey_is_null": "You need to provide a license key.",
+    "sellerkey_is_null": "You need to provide a seller key.",
+    "command_error": "There has been an error while executing the command.",
+    "logged_in_as": "Logged in as:",
+    "bot_online": "Bot Online",
+    "bot_fail_start": "Bot failed to start.",
+    "bot_unhandled_err": "Unhandled promise rejection:"
+}
