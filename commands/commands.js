@@ -3,7 +3,7 @@ const { dataSets } = mazksteleadditionalv1;
 const fs = require('fs');
 module.exports = async (ctx) => {
     ctx.reply("Command are disabled for now.")
-    const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js') && file !== 'commands.js');
+    /* const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js') && file !== 'commands.js');
 
     let commands = [];
     for (const file of commandFiles) {
@@ -22,5 +22,5 @@ module.exports = async (ctx) => {
         commandsString += `<b>${command.command}</b> - ${command.description}\n`;
     });
 
-    ctx.replyWithHTML(`<b>Available commands:</b>\n\n${commandsString}`);
+    ctx.replyWithHTML(`<b>Available commands:</b>\n\n${commandsString}`); */
 };

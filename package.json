@@ -1,11 +1,8 @@
 {
   "name": "kauthtelebot",
   "version": "1.0.0",
-  "description": "",
+  "description": "This bot is not official one for keyauth.cc",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "mazkdevf",
   "license": "ISC",

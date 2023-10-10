@@ -1,3 +1,0 @@
-module.exports = (ctx) => {
-    //ctx.reply('List of available commands:\n\n/start - Start the bot\n/help - Show help message\n/echo [message] - Repeat the given message');
-};

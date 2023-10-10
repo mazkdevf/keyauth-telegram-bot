@@ -4,8 +4,6 @@ const { dataSets } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
-    let reply = await ctx.reply('Activating license...');
-
     let sellerkey = await db.get(`token_${ctx.message.from.id}`)
     if (sellerkey === null) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "sellerkey_is_not_set"));
 
@@ -17,6 +15,7 @@ module.exports = async (ctx, args) => {
     if (!pw) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "password_is_null"))
     if (!key) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "licensekey_is_null"))
 
+    let reply = await ctx.reply('Activating license...');
 
     fetch(`https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=activate&user=${un}&key=${key}&pass=${pw}&format=json`)
         .then(res => res.json())
