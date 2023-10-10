@@ -1,4 +1,8 @@
-# keyauth-telegram-bot
+# KeyAuth Telegram Bot
+
+#### Disclaimer, Bot can have errors this is coded at midnight :)
+
+- This is techincally not official bot from KeyAuth, but as an KeyAuth Dev Team Member it is trusted bot.
 
 **What is KeyAuth?**
 
