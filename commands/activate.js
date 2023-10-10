@@ -1,7 +1,6 @@
-const mazks = require("../mazks")
-const { dataSets } = new mazks()
 const db = require('quick.db');
-
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {

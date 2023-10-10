@@ -1,15 +1,8 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets } = mazksteleadditionalv1;
 const db = require('quick.db');
 
-const fetch = require('node-fetch')
-
 module.exports = async (ctx, args) => {
-
-
-    // args = mask
     let mask = args[0];
 
     if (!mask) mask = "*****-*****-*****-*****-*****";

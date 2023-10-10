@@ -3,10 +3,165 @@
     "username_is_null": "You need to provide a username.",
     "password_is_null": "You need to provide a password.",
     "licensekey_is_null": "You need to provide a license key.",
+
+    "expiry_is_null": "You need to provide an expiry.",
+    "level_is_null": "You need to provide a level.",
+    "amount_is_null": "You need to provide an amount.",
+
+    "amount_is_too_high": "The amount you provided is too high.",
+
+
+    "type_is_null": "You need to provide a type.",
+    "hardware_or_ip_is_null": "You need to provide a hardware id or ip.",
+
+
+    "channel_name_is_null": "You need to provide a channel name.",
+    "channel_delay_is_null": "You need to provide a channel delay.",
+
+    "hash_is_null": "You need to provide a hash.",
+
+
+
     "sellerkey_is_null": "You need to provide a seller key.",
+
+    "hwid_is_null": "You need to provide a hardware id.",
+
+
+    "sub_name_is_null": "You need to provide a subscription name.",
+"sub_level_is_null": "You need to provide a subscription level.",
+
+"time_is_null": "You need to provide a time.",
+
+"expires_is_null": "You need to provide an expiry.",
+
+"var_name_is_null": "You need to provide a variable name.",
+"var_value_is_null": "You need to provide a variable value.",
+"var_authed_is_null": "You need to select either 1 for true or 0 for false.",
+
+"reason_is_null": "You need to provide a reason.",
+
+"baseurl_is_null": "You need to provide a base url.",
+"useragent_is_null": "You need to provide a user agent.",
+"authed_is_null": "You need to select either 1 for true or 0 for false.",
+
+"authed_is_not_number": "Authed must be a number.",
+"baseurl_is_not_valid": "Base url is not valid.",
+
+
+
+    "unsupported_command": "Hello, Unsupported command type. Type / to see available commands.",
+
+
+
+
+
+
+
+
+
+
     "command_error": "There has been an error while executing the command.",
     "logged_in_as": "Logged in as:",
     "bot_online": "Bot Online",
     "bot_fail_start": "Bot failed to start.",
-    "bot_unhandled_err": "Unhandled promise rejection:"
+    "bot_unhandled_err": "Unhandled promise rejection:",
+    "activate": "Activate License Key",
+    "add": "Add key. You must specify the optional parameters the first time. After they're saved.",
+    "addBalance": "Add balance to reseller accounts.",
+    "addblack": "Add blacklist",
+    "addchannel": "Add chat channel",
+    "addhash": "Add Additional Hash to your Application",
+    "addhwid": "Add HWID",
+    "addsub": "Add Subscription",
+    "addtime": "Add time to unused keys(use extend for used keys aka users)",
+    "adduser": "Add user to application",
+    "addvar": "Add application variable",
+    "ban": "Ban license key",
+    "banuser": "Ban user",
+    "createwebhook": "Add webhook to application",
+    "del": "Delete a key",
+    "delblack": "Delete blacklist",
+    "delchannel": "Delete chat channel",
+    "delexpusers": "Delete users with no active subscriptions",
+    "delsub": "Delete user's subscription",
+    "delunused": "Delete Unused Licenses",
+    "delused": "Delete Used Licenses",
+    "deluser": "Delete user",
+    "deluservar": "Delete user variable",
+    "editvar": "Edit Variable",
+    "extend": "Extend User",
+    "fetch": "Fetch all kind of things.",
+    "fetchlicensefromuser": "Get License from user",
+    "getvar": "Retrieve user variable",
+    "help": "Help command for bot",
+    "info": "Info On key",
+    "killsession": "Kill All Existing Sessions",
+    "mute": "Mute user from sending messages in chat channels",
+    "purgechat": "Purge chat channel's messages",
+    "resetall": "Reset all user's hwid",
+    "resethash": "Reset app hash",
+    "resetpw": "Reset password of user",
+    "resetuser": "Reset a user",
+    "setkeymask": "Sets License Key mask",
+    "setlog": "Sets a Discord webhook to log commands used on this bot.",
+    "setseller": "Sets The seller key",
+    "setvar": "Assign variable to user(s)",
+    "stats": "Application Statistics",
+    "unban": "Unban license key",
+    "unbanuser": "Unban user",
+    "unmute": "Unmute user from chat channel",
+    "upload": "Upload a file",
+    "userdata": "Retrieve info from a user",
+    "verify": "Verify license exists",
+    "verifyuser": "Verify user exists",
+    "activate_args": ["username", "password", "license"],
+    "add_args": ["Expiry (days)", "level", "amount"],
+    "addBalance_args": ["username", "days", "weeks", "months", "threemonths", "sixmonths", "lifetimes"],
+    "addblack_args": ["type (ip, hwid)", "value"],
+    "addchannel_args": ["name", "delay"],
+    "addhash_args": ["md5hash"],
+    "addhwid_args": ["username", "hardwareid"],
+    "addsub_args": ["name", "level"],
+    "addtime_args": ["time"],
+    "adduser_args": ["username", "subscription", "expires (days)", "password"],
+    "addvar_args": ["name", "value", "authed"],
+    "ban_args": ["key", "reason"],
+    "banuser_args": ["username", "reason"],
+    "createwebhook_args": ["in future", "in future"],
+    "del_args": ["in future", "in future"],
+    "delblack_args": ["in future", "in future"],
+    "delchannel_args": ["in future", "in future"],
+    "delexpusers_args": ["in future", "in future"],
+    "delsub_args": ["in future", "in future"],
+    "delunused_args": ["in future", "in future"],
+    "delused_args": ["in future", "in future"],
+    "deluser_args": ["in future", "in future"],
+    "deluservar_args": ["in future", "in future"],
+    "editvar_args": ["in future", "in future"],
+    "extend_args": ["in future", "in future"],
+    "fetch_args": ["in future", "in future"],
+    "fetchlicensefromuser_args": ["in future", "in future"],
+    "getvar_args": ["in future", "in future"],
+    "help_args": ["in future", "in future"],
+    "info_args": ["in future", "in future"],
+    "killsession_args": ["in future", "in future"],
+    "mute_args": ["in future", "in future"],
+    "purgechat_args": ["in future", "in future"],
+    "resetall_args": ["in future", "in future"],
+    "resethash_args": ["in future", "in future"],
+    "resetpw_args": ["in future", "in future"],
+    "resetuser_args": ["in future", "in future"],
+    "setkeymask_args": ["in future", "in future"],
+    "setlog_args": ["in future", "in future"],
+    "setseller_args": ["in future", "in future"],
+    "setvar_args": ["in future", "in future"],
+    "stats_args": ["in future", "in future"],
+    "unban_args": ["in future", "in future"],
+    "unbanuser_args": ["in future", "in future"],
+    "unmute_args": ["in future", "in future"],
+    "upload_args": ["in future", "in future"],
+    "userdata_args": ["in future", "in future"],
+    "verify_args": ["in future", "in future"],
+    "verifyuser_args": ["in future", "in future"]
+
 }

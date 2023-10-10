@@ -1,18 +1,12 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets } = mazksteleadditionalv1;
 const db = require('quick.db');
-
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
-
-
     let sellerkey = await db.get(`token_${ctx.message.from.id}`)
     if (sellerkey === null) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "sellerkey_is_not_set"));
 
-    // args = username, days, weeks, months, threemonths, sixmonths, lifetimes
     let username = args[0];
     let days = args[1];
     let weeks = args[2];
@@ -35,13 +29,12 @@ module.exports = async (ctx, args) => {
     fetch(`https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=setbalance&username=${username}&day=${days}&week=${weeks}&month=${months}&threemonth=${threemonths}&sixmonth=${sixmonths}&lifetime=${lifetimes}`)
         .then(res => res.json())
         .then(json => {
+            ctx.deleteMessage(reply.message_id)
             if (json.success) {
-                ctx.deleteMessage(reply.message_id)
                 ctx.replyWithHTML(`<b>Balance has successfully been added to ${username}!</b>`);
                 
             }
             else {
-                ctx.deleteMessage(reply.message_id)
                 ctx.replyWithHTML(`<b>Balance has failed to be added to ${username}!</b>\n\n<b>Reason:</b> ${json.message}`);
             }
         })

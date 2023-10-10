@@ -1,10 +1,5 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
-const db = require('quick.db');
-
-const fetch = require('node-fetch')
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets, markdown } = mazksteleadditionalv1;
 
 module.exports = async (ctx, args) => {
     ctx.replyWithHTML(`<b>Coming Soon!</b>`);

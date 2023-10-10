@@ -1,16 +1,8 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
-const db = require('quick.db');
-
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { markdown } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
-
-
-    // args = varName, varValue, Username
-
     let reply = await ctx.reply('Fetching Statistics...');
 
     fetch(`https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=stats`)

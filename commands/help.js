@@ -1,7 +1,5 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown } = new mazks()
-const { message } = require('telegraf/filters')
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { markdown } = mazksteleadditionalv1;
 module.exports = async (ctx, args) => {
 
     let helpMessage = `

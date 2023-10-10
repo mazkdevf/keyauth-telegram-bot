@@ -1,18 +1,11 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
-const db = require('quick.db');
-
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
-
-
-    // args = license
     let key = args[0];
 
-    if (!key) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "license_is_null"))
+    if (!key) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "licensekey_is_null"))
 
     let reply = await ctx.reply('Verifying License...');
 

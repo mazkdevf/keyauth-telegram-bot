@@ -1,20 +1,13 @@
-const { markup } = require("telegraf")
-const mazks = require("../mazks")
-const { clearSpaces, markdown, dataSets } = new mazks()
-const { message, data } = require('telegraf/filters')
-const db = require('quick.db');
-
+const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
+const { dataSets, markdown } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
-
-
-    // args = un
     let un = args[0];
 
     if (!un) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "username_is_null"))
 
-    let reply = await ctx.reply('Unmuting User...');
+    let reply = await ctx.reply('Fetching user data...');
 
     fetch(`https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=userdata&user=${un}`)
         .then(res => res.json())
