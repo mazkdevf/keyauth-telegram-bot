@@ -1,4 +1,4 @@
-# KeyAuth Telegram Bot
+# KeyAuth Telegram Bot -> Please star :star2:
 
 #### Disclaimer, Bot can have errors this is coded at midnight :)
 
