@@ -19,7 +19,7 @@ module.exports = async (ctx, args) => {
     
     let reply = await ctx.reply('Adding User...');
 
-    let url = pass != "none" ? `https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}&pass=${pass}` : `https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}`
+    let url = pass != "none" ? `https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${un}&sub=${sub}&expiry=${expires}&pass=${pass}` : `https://keyauth.win/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${un}&sub=${sub}&expiry=${expires}`
 
     fetch(url)
         .then(res => res.json())
