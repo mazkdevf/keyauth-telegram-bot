@@ -1,6 +1,7 @@
 const mazksteleadditionalv1 = new (require("../mazksteleadditionalv1"))();
 const { dataSets } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
+const db = require("quick.db")
 
 module.exports = async (ctx, args) => {
     let sellerkey = await db.get(`token_${ctx.message.from.id}`)
