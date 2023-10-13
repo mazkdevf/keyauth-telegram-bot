@@ -3,6 +3,9 @@ const { dataSets } = mazksteleadditionalv1;
 const fetch = require('node-fetch')
 
 module.exports = async (ctx, args) => {
+    let sellerkey = await db.get(`token_${ctx.message.from.id}`)
+    if (sellerkey === null) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "sellerkey_is_not_set"));
+
     let un = args[0];
 
     if (!un) return ctx.reply(await dataSets(process.env.TG_BOT_LANG, "username_is_null"))
